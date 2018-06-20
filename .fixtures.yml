@@ -1,0 +1,8 @@
+fixtures:
+  repositories:
+    selinux:
+      repo: "https://github.com/Adaptavist/puppet-selinux"
+    stdlib:
+      repo: "https://github.com/Adaptavist/puppet-stdlib"
+  symlinks:
+    selinux_config: "#{source_dir}"
