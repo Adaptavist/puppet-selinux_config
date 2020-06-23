@@ -9,9 +9,7 @@ describe 'selinux_config', :type => 'class' do
       :operatingsystem => 'CentOS'
     }}
 
-    it do
-      should contain_class('selinux').with('mode' => 'enforcing')
-    end
+    it { should contain_class('selinux').with('mode' => 'enforcing') }
   end
 
   context "Should enable selinux and create modules" do
@@ -30,11 +28,9 @@ describe 'selinux_config', :type => 'class' do
       }
       }}
 
-    it do
-      should contain_class('selinux').with('mode' => 'permissive')
-      should contain_selinux__module('name1').with('ensure' => 'present', 'source' => 'path_to_file_1')
-      should contain_selinux__module('name2').with('ensure' => 'present', 'source' => 'path_to_file_2')
-    end
+    it { should contain_class('selinux').with('mode' => 'permissive') }
+    it { should contain_selinux__module('name1').with('ensure' => 'present', 'source' => 'path_to_file_1') }
+    it { should contain_selinux__module('name2').with('ensure' => 'present', 'source' => 'path_to_file_2') }
   end
 
 end

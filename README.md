@@ -3,7 +3,7 @@
 
 ## Overview
 
-The **nselinux_config** module handles the configuration of selinux modules
+The **selinux_config** module handles the configuration of selinux modules
 It is designed to be used alongside the ***Adaptavist/puppet-selinux*** puppet module
 
 ### Configuration
